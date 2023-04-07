@@ -58,7 +58,10 @@ for city in cities:
         info = driver.find_elements(By.CLASS_NAME, "info")
 
         for i in range(0, 8):
-            plant_info.append(info[i].text)
+            if len(info) < 7:
+                continue
+            else:
+                plant_info.append(info[i].text)
 
         all_plant_info.append(plant_info)
 
