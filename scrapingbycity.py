@@ -62,6 +62,7 @@ for city in cities:
         else:
             for i in range(0, 7):
                 plant_info.append(info[i].text)
+                plant_info.insert(0, all_names[index])
 
         all_plant_info.append(plant_info)
 
@@ -70,8 +71,6 @@ for city in cities:
     # adds all info and names to a dataframe
 
     df = pd.DataFrame(all_plant_info)
-
-    df.insert(0, "Plant Name", all_names)
 
     df.to_csv(f'plantinfo{city}.csv', index=False, encoding='utf-8')
 
