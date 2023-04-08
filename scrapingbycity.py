@@ -60,7 +60,7 @@ for city in cities:
         if len(info) < 7:
             continue
         else:
-            for i in range(0, 8):
+            for i in range(0, 7):
                 plant_info.append(info[i].text)
 
         all_plant_info.append(plant_info)
